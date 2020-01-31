@@ -53,10 +53,10 @@ workflows:
 
   build_and_test:
     jobs:
-      - build
+      - build:
       - testlinks:
           requires:
-            - build
+            - build:
 
       - run:
           name: notify build is finished
